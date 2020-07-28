@@ -20,10 +20,3 @@ function updateTime(k) {
 }
 
 currentTime(); /* calling currentTime() function to initiate the process */
-
-
-document.body.className += ' fade-out'
-
-$(function() {
-  $('body').removeClass('fade-out');
-});

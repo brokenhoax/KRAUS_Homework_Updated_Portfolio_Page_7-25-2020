@@ -9,13 +9,10 @@ body {
   margin: 0;
   height: 100vh;
   font-size: 1.8rem;
-  opacity: 1;
-  transition: 1s opacity;
 }
 
-body fade-out {
-  opacity: 0;
-  transition: none;
+a:link {
+  text-decoration: none;
 }
 
 #datetime {
@@ -33,15 +30,16 @@ body fade-out {
     "left   right  image"
     "bottom bottom image";
     height: 100vh;
-    margin: 2em;
+    /* margin: 2em; */
 }
 
 main {
   grid-area: main;
+  position: relative;
   background-color: #f2f4f8;
   font-family: 'Bebas Neue', cursive;
   font-size: 8rem;
-  padding-top: 6vh;
+  padding-top: 10vh;
   padding-left: 4vw;
 }
 
@@ -66,21 +64,24 @@ header {
 }
 
 .left {
-  display: flex;
+  grid-area: left;
+  display: grid;
   justify-content: center;
   align-items: center;
-  grid-area: left;
   background-color: #d5d9e0;
   font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
 }
 
 .right {
-  display: flex;
+  grid-area: right;
+  display: grid;
+  position: relative;
   justify-content: center;
   align-items: center;
-  grid-area: right;
   background-color: #9fa5ad;
   font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
 }
 
 .bottom {
@@ -90,8 +91,52 @@ header {
   grid-area: bottom;
   background-color: #373d42;
   font-family: 'Bebas Neue', cursive;
-  color: whitesmoke
+  color: whitesmoke;
+  font-size: 3rem;
 }
+
+.box {
+  margin: 0px;
+  background-color: white;
+}
+
+.palette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+/* .about {
+  position: absolute;
+  background-color: #e7a940;
+  overflow: hidden;
+  font-size: 3rem;
+  width: 100%;
+  top: 10;
+  right: 0;
+} */
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 768px) {
 
@@ -105,7 +150,6 @@ header {
     "right"
     "bottom"
     "header";
-    margin: 2em;
   }
 
   main {
@@ -125,6 +169,7 @@ header {
   }
   
   .left {
+    display: grid;
     grid-area: left;
     background-color: #d5d9e0;
   }
@@ -146,4 +191,11 @@ header {
   #name {
     text-align: center;
   }
+
+  .about {
+    background-color: #e7a940;
+    overflow: hidden;
+    font-size: 2rem;
+  }
+  
 }
