@@ -64,12 +64,46 @@ header {
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(auto, 5);
+  grid-template-rows: auto;
   grid-template-areas: 
     "main"
     "header"
     "left"
     "right"
     "bottom";
+  }
+
+  main {
+    grid-area: main;
+    background-color: #f2f4f8;
+    min-height: 100px;
+  }
+  
+  header {
+    grid-area: header;
+    background-color: #ffffff;
+    min-height: 100px;
+  }
+  
+  .left {
+    grid-area: left;
+    background-color: #d5d9e0;
+    min-height: 100px;
+  }
+  
+  .right {
+    grid-area: right;
+    background-color: #9fa5ad;
+    min-height: 100px;
+  }
+  
+  .bottom {
+    grid-area: bottom;
+    background-color: #373d42;
+    min-height: 100px;
+  }
+
+  .image {
+    display: none;
   }
 }
